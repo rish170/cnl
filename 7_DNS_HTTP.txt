@@ -1,0 +1,32 @@
+A. (DNS)
+1. Open Wireshark as Administrator
+2. Start capturing packets. Select your active interface (WiFi or LAN)
+3. Generate DNS traffic. In CMD run nslookup www.google.com
+4. Stop Captiring. Click red square in Wireshark.
+5. Filter DNS Packet. In Filter bar at top of Wireshark, type DNS, press Enter.
+6. Expand:
+   - Transaction ID: Used to match request and response.
+   - Flags: Standard Query (0 for nslookup), Recusion Desired, Response.
+   - Query Name: www.google.com
+   - Query type: A (IPv4)
+
+7. Select the response packet from DNS server.
+8. Observe the resolved IP Address, TTL under the answer section.
+
+
+
+B. HTTP
+1. Open Wireshark as Administrator
+2. Start capturing packets. Select your active interface (WiFi or LAN)
+3. In a browser type http.example.com
+4. Stop Captiring. Click red square in Wireshark.
+5. Filter HTTP Packet. In Filter bar at top of Wireshark, type HTTP, press Enter.
+6. Observe HTTP GET request.
+   - Method: GET
+   - Host: example.com
+   - User: agent
+
+7. Observe the HTTP response
+   - Status Code: 200 OK
+   - Content-type: text/html
+   - Content-length: 
