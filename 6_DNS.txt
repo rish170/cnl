@@ -1,0 +1,11 @@
+A. (DNS Packet Analysis using DNS commands)
+1. Win + R, cmd, Enter
+2. nslookup www.abc.com
+3. Observe details (DNS Server, IP Address)
+4. Perform reverse loop up (nslookup IPaddress)
+5. Query different DNS record types (nslookup -query=MX www.example.com)
+
+B. (Using Wireshark)
+1. Open Wireshark as Administrator
+2. Start capturing packets. Select your active interface (WiFi or LAN)
+3. 
