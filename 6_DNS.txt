@@ -8,4 +8,13 @@ A. (DNS Packet Analysis using DNS commands)
 B. (Using Wireshark)
 1. Open Wireshark as Administrator
 2. Start capturing packets. Select your active interface (WiFi or LAN)
-3. 
+3. Generate DNS traffic. In CMD run nslookup www.google.com
+4. Stop Captiring. Click red square in Wireshark.
+5. Filter DNS Packet. In Filter bar at top of Wireshark, type DNS, press Enter.
+6. Expand:
+   - Transaction ID: Used to match request and response.
+   - Flags: Standard Query (0 for nslookup), Recusion Desired, Response.
+   - Questions: The domain name required.
+
+7. Select the response packet from DNS server.
+8. Observe the resolved IP Address under the answer section.
